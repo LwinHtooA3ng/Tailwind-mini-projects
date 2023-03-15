@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="shadow-lg rounded-xl p-4 w-90">
+            <p class="text-2xl text-bold text-center mb-8">Login</p>
+            <input type="text" class="border p-2 w-full rounded-md focus:border-green-500 mb-3" placeholder="Email">
+            <input type="password" class="border p-2 w-full rounded-md focus:border-green-500 mb-3" placeholder="Password">
+            <button class="w-full bg-green-500 hover:bg-green-700 text-white p-2 rounded-md mb-3">Login</button>
+            <div class="flex justify-between items-center">
+                <p>Forget password</p>
+                <p>Create new account</p>
+            </div>
+            <div class="mb-3 border-b w-full my-5"></div>
+            <div class="flex justify-between space-x-4">
+                <button class="border hover:bg-green-200 rounded-md border-green-500 w-full p-2 flex justify-center items-center space-x-2">
+                    <img class="w-4" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" alt="">
+                    <span>Google</span>
+                </button>
+                <button class="border hover:bg-green-200 rounded-md border-green-500 w-full p-2 flex justify-center items-center space-x-2">
+                    <img class="w-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEU7WJ/////u7u7t7e35+fk8WJ7z8/Pe4+7x8fH29vb8/PwaQJT//vsEOJFTaqg1U50fQ5XAyd/y8/decKgpS5nz9fkMO5KhrM0xUZynstAtTZrY3emNm8MeRZdMZKWHkrno6u9xgLB2iLmCk7/Bx9jO0dxpfLGYosJVbKkANZHS2ejIz+KapMMAL40AI4nh5e22vdMAFYaBeZXHAAAI7UlEQVR4nO2dC3+jKBDAfaAVdU+TuHmZZL3tbnvX7m3vvv+XOzWCJIJvhFCm2/42BDP8HZQBxolhIgG2dRUb4DILiYeLIK7m4zJcBHGRi460RSswRDdAE2pCTagJNeFDEfq096sye3gD7H4N4K7AMkAlPnCRQB+V4SIXF0FcBPyWI2HzSNA4chEFho3EJU4PEsLASOqz6KEiiziLSIjzL1iBga+E+n3Y7AA+pZ94+FBKP2n2MEIB5Rrip4BKuGQDxBBqGz4+IXcbLtlJtA35NGBRG4oerrgrwD4NgC68igvrMkoRroaLAO3IZjVBCki/FAnpNlZCuo0tZ5F0Gxtmqs//ggps+zPNLTShJtSEmlATTifkPh7SFOAimgKzWY3i8HSOh/gsUjzv2lvycRHFbaxbB3A1ipkobuMEBfX57VCACW3ejrEoBWJmT3LOD71SiO7nVkUe2YmqErIToaK66RCXmc1qtQLP66VgnvmhCcCTXAImETZtuD5tDEcmMTan9Zw23AVxZMglUXLezUd4SGTjKyQKDoMIW27mu0Q0DFWcKNiRhKzRAt+vXB8JxGXFK3MdyGhBo0A8r03f7yDo9trAKRaNwpTkBGZYxQAbSU2YS7QB0+cW3pNojFZ58mYgdERTtIijCTWhJhQugwgZ46ElOaHVOR7CDgGSE4IugO7dNckJZ4g2kZ+w59yCOQNWklB9G6pPKKyXOrmuKIr2+31UyrXMMZhNeDQbHpNzfLlc/vyWy6UQx9ie4zhJmIsMD2RDx0jOxvfnH2m2znwAwjDL/5PLU/rz5/Pzi7MfTyjHeBjF0esqDENAelzete0wDE3/L/o0vM94iNc2AF7bALisWPzgT+hER2eX5WSUVaKqHes/WISu10HQEQWdC3/CZL/LQspdgFi4ZxPOsYrBm/D44vpdO6RsQvlnT9H2Fbi2yoT7tNz1VJXQif5OQ1tlwmifVjc4VQm3lQWVJUx+IMDxhENGCwsJ4VXwJHSSF1ocRR0Jggl9q8WGVitBTijQa9u7teVoMcI4mscyvzIJJV7FcOKd3zsWo5WwSSDJ7MnJPGGExPv8CM+7sH88zWPaMBsQMfSINkxe85FCaRseV1BxG14KgEUIBY2Hx+8hUlARNsdD4pmZKeMhsQdz/yDLtYgP4TY1XVInaG8H26fpOhKI2l1zMqTgKjcxwmVwDOHwmB7bht27a8T7qO8u4HlHL1+RgqsQhD6Ab29vq9X726r4SYuf9wvjREk7t9h/wwruCbPd98txvz+fk+N5f97H5Q9juVRiwuSVRXiIYhbOIxE6wYpB+Ctgb1IoQfj+ZeAHPRohYNwyH4/QCDIq4Y+hYZDyRpsE1Sq+fTsevh4HE3aPh0TaEBx/SuQI8X1OhFcl9a5K8cocHG3tPPl+K4Hvd0dBcyIsldx43rkrcx76OaTnPfqZGV6E1j2h5XnbobrknR9SCV33y1KEwmy4GKEgG3rK23DBXqr+dSiql/K5DsWs0xTjYWOdZixhxzrNjQ7BXhscQSjrKgYixNdISTjmOpR2bqEJNaEm1IRqErIytPIlrJTaowk7U8DW2cyINKiopFgggFMJiWfoSUIfKUALJsWrLwZZzaEeekcIcYZWggAQBNy9NicOKPLPG8Vrc93ftLqFsAmFR5s4wXuaZR/pU5alRZQzyP/AME29WkF9jdhp+pF9hKheeVBaxHqn7H0L4fNDJ1iFRV+HxcJdGeec/8lfWjRCq6h2rVLEQ8HqQAje5iac1Yar6uNG5KdBtyH3nbUIJwlhawPaCFFReGA9cKEIoQWf5b4OZyC8sNbCpbVhz+sQNW3dPlp0EHIeD8s7TbuCihBJM9rEyrathB3jYZtPA6b7NMVOYbuC+yLY8EzCfwNWGwqfhnIkqaDLL526ToP3Qqd8c8DuzCbs8Ev5r9N0ESJpJXxO2ITCZ0+zEL4wtxUVIfxgt0ARwrTl49UgXLHjFxQh/Jeda0wRwl8zEfLZtyAIR2do3bAD3frsW+CzKInn3czQCpleqTSe98QZsMf02cZHm8xM6Fpu8a9WADyPTlhUIwi94jU49CQUNz8ErudCDxJN912XTgi9nKhuZ3lYi98tRS81nOM2iINtEMTb/E/xm/+Jf9N3uf87B9cKqGbx2xYoJYENi1agX+I/rH38+5roxdyE3CMVoq3qMVGOiGgTGWITpxGOzdDKixDeJvcosna4o6JN6gytkEqgo01U2iHVhJpQE2pCTTidUMh4aC0wHorJ0BqEtMyqY3waWTO0UmOEx3reHbtr+EoQH+et0uzp0z5RshyhIBuq30v1EyWa8AGemeEzHrblNy2/F4yX14YVXFeJinDEUX6pZ7YTCMrQeu9584uC/lRzC02oCTWhJuRPyBgtZCeUNUMrIsRhwO5oG0qaoXVJr826OYul6Dk+N0I9A56PUP21NrVmwBL1UvXvNJx6qUTjIadVfTEZWtHOzK3OUTszkmZoXXJ3jXgf9d2H8rz17EkTakJNqAkXJWSOhxwAZ4u+NCZmaC0DXMFmaNrUXoQQK6gztA72aaIN8H2vnaA7Cto8DU3u24uQEgU93C+NT+YMz8yY62B+I840twjW5gyzJ9PcsZ+OE0uYHMyRhNYtoXkYnMF4FOHAGXAUHMyxhI1Hy3ZBPC8j+5mZ3nxxsDNHE97bML8WTxsybdNk2b9Re2nS+wOMzWltjidsPh5oQvA0q1CzKFkDPoAY8mYhzBtwjQEgtgRcCwUG4CKAiupvhTNxUf10HrQYzx/eKvCQznYFNEJytOhcp6kagIT6RTe4Abga0QDBCjq9NsKpKqV+EJmio25dK8TAJ52pCrxmtZGrGFfp+AJGVEQQNu9WghRoQk2oCTWhJpyTkJWhtSwa3oCmXzQ+E9YkBZ3ZzO5znjaTjfXMSTY+m9nwamTRJ/Da8JXQ5Xk3+gnxFZPNftLuGDevIX4Kes4PVSPkbsMlO4m2IZ8GaBtyJ1TrXip6uOKuoKdPM6/LsaiCh/dL7XYFep1GE2pCTagJNeEwQmX3LfBZVGpuQShYjnBEhtZZFPwPH5pmmtR2UesAAAAASUVORK5CYII=" alt="">
+                    <span>Facebook</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

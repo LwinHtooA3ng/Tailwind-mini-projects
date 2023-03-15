@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Card</title>
+    <!-- <script src="https://kit.fontawesome.com/790f665efb.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script>
+        tailwind.config = {
+            darkMode : 'class',
+        }
+    </script>
+  </head>
+  <body>
+    <div
+      class="flex flex-col dark:bg-slate-800 justify-center items-center h-screen"
+    >
+      <div class="shadow-lg dark:bg-slate-100 rounded-xl mb-5 p-6 max-w-xl">
+        <div
+          class="flex flex-col md:flex-row items-center space-y-5 md:space-y-0"
+        >
+          <div class="mr-5 mb-5 pimg">
+            <img class="rotate-12 w-64" src="nbp.png" alt="" />
+          </div>
+
+          <div class="content">
+            <p class="text-xl">New Balance 550 - Lorem ipsum dolor sit amet.</p>
+            <p class="text-sm line-through">$ 300</p>
+            <p class="text-lg mb-5">$ 150</p>
+            <div class="flex mb-3">
+              <button class="bg-red-500 p-2 rounded text-white mr-2 w-full">
+                Add to card
+              </button>
+              <div class="border border-red-500 p-2 rounded">
+                <span class="text-red-500"
+                  ><i class="fa-solid fa-heart"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div class="w-3 mr-2 h-3 rounded-full bg-red-500"></div>
+              <p>4+ pcs, In Stock</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input id="dm" type="checkbox" value="" class="sr-only peer" />
+        <div
+          class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+        ></div>
+        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Dark Mode</span
+        >
+      </label>
+    </div>
+    <script>
+      dm = document.getElementById("dm");
+
+      theme = localStorage.getItem("theme");
+      if (theme == "dark") {
+        dm.checked = true;
+        changeToDark();
+      } else {
+        dm.checked = false;
+        changeToLight();
+      }
+
+      function changeToLight() {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+
+      function changeToDark() {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+
+      dm.addEventListener("click", () => {
+        theme = localStorage.getItem("theme");
+        if (theme == "dark") {
+          changeToLight();
+        } else {
+          changeToDark();
+        }
+      });
+    </script>
+  </body>
+</html>
